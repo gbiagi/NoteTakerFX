@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<DialogPane prefHeight="100.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cat.gbiagi.CustomDialogController">
+   <header>
+          <Label alignment="CENTER" contentDisplay="CENTER" text="New note:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </header>
+   <content>
+      <AnchorPane prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <TextArea fx:id="noteText" layoutX="15.0" prefHeight="100.0" prefWidth="260.0" wrapText="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="tagName" layoutX="136.0" layoutY="65.0" prefHeight="25.0" prefWidth="55.0" promptText="Tag" AnchorPane.bottomAnchor="-20.0" />
+            <Label fx:id="tag1" layoutX="20.0" layoutY="163.0" style="-fx-border-color: black; -fx-border-radius: 5;" AnchorPane.bottomAnchor="-18.0" AnchorPane.leftAnchor="10.0">
+               <padding>
+                  <Insets left="2.0" right="2.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="tag2" layoutX="75.0" layoutY="86.0" style="-fx-border-color: black; -fx-border-radius: 5;" AnchorPane.bottomAnchor="-18.0">
+               <padding>
+                  <Insets left="2.0" right="2.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font></Label>            <Button fx:id="addTagButton" layoutX="198.0" layoutY="85.0" mnemonicParsing="false" text="+tag" AnchorPane.bottomAnchor="-20.0" />
+            <Button fx:id="saveButton" layoutX="248.0" layoutY="105.0" mnemonicParsing="false" text="Ok" AnchorPane.bottomAnchor="-20.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>
