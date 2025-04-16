@@ -93,7 +93,7 @@ public class LandingController implements Initializable {
             dialogStage.setScene(new Scene(root));
             dialogStage.showAndWait();
 
-            // Get the note text and tags
+            // Asignar tags y texto
             if (!controller.getNoteText().isEmpty()) {
                 String noteText = controller.getNoteText();
                 List<String> tags = new ArrayList<>();
@@ -119,8 +119,10 @@ public class LandingController implements Initializable {
         }
     }
     public void showNotesForTag(String tag) {
-        notesPanel.getChildren().clear(); // Limpiar el panel antes de mostrar las notas
-        List<String> notes = new ArrayList<>(tagNoteMap.getOrDefault(tag, Collections.emptyList())); // Copiar la lista para evitar modificaciones concurrentes
+        // Limpiar el panel antes de mostrar las notas
+        notesPanel.getChildren().clear();
+        // Copiar la lista para evitar modificaciones
+        List<String> notes = new ArrayList<>(tagNoteMap.getOrDefault(tag, Collections.emptyList()));
 
         for (String note : notes) {
             // Crear y agregar las notas relacionadas al panel
@@ -143,6 +145,7 @@ public class LandingController implements Initializable {
         }
     }
     public void showAllNotes() {
+        // Mostrar todas las notas
         notesPanel.getChildren().clear();
         for (String note : allNotes) {
             try {
