@@ -2,20 +2,26 @@ package cat.gbiagi;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 public class NoteController  {
     @FXML
-    public String noteText;
+    public AnchorPane notePane;
+    @FXML
+    public Text textNote;
+    @FXML
+    public Button deleteBt;
 
     public String getNoteText() {
-        return noteText;
+        return textNote.getText();
     }
 
     public void setNoteText(String noteText) {
-        this.noteText = noteText;
+        this.textNote.setText(noteText);
     }
+
 }
